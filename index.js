@@ -124,8 +124,6 @@ client.on("message", (message) => {
 
     message.channel.send(embed)
   
-
-  message.channel.send(embed)
 } else if (message.content == "?초대코드2") {
   client.guilds.cache.array().forEach((x) => {
     x.channels.cache
