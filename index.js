@@ -185,7 +185,7 @@ client.on("message", (message) => {
 
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
-        x.user.send(`<@${message.author.id}> ${contents}`)(embed)
+        x.user.send(embed)
       })
 
       return message.reply("공지를 전송했습니다.")
