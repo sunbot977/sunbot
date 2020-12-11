@@ -123,7 +123,7 @@ client.on("message", (message) => {
     embed.addField("[ 배너조건 ] : ", commandStr)
 
     message.channel.send(embed)
-  }
+  
 
   message.channel.send(embed)
 } else if (message.content == "!초대코드2") {
@@ -189,10 +189,8 @@ client.on("message", (message) => {
     } else {
       return message.reply("채널에서 실행해주세요.")
     }
-  }
-
-else if (message.content.startsWith("!청소")) {
-  if (message.channel.type == "dm") {
+  }else if (message.content.startsWith("!청소")) {
+   if (message.channel.type == "dm") {
     return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
   }
 
@@ -231,7 +229,7 @@ else if (message.content.startsWith("!청소")) {
       })
       .catch(console.error)
   }
-}
+ }
 })
 
 function checkPermission(message) {
