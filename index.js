@@ -105,6 +105,7 @@ client.on("message", (message) => {
       .setFooter("COVERT 파일함", img)
 
     message.channel.send(embed)
+
   } else if (message.content == "?배너") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
@@ -178,9 +179,13 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!전체공지".length)
+      let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#4ee75d").setFooter('SUN BOT 🌈')
+
+      embed.addField("공지: ",contents)
+
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
-        x.user.send(`<@${message.author.id}> ${contents}`)
+        x.user.send(`<@${message.author.id}> ${contents}`)(embed)
       })
 
       return message.reply("공지를 전송했습니다.")
