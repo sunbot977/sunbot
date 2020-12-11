@@ -70,10 +70,12 @@ client.on("message", (message) => {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
       { name: "ping", desc: "현재 핑 상태" },
-      { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
       { name: "?구매", desc: "구매문의" },
-      { name: "?명령어", desc: "도움말(help)" },
       { name: "?배너", desc: "배너조건" },
+      { name: "?청소", desc: "텍스트 지움" },
+      { name: "?명령어", desc: "도움말(help)" },
+      { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
+      { name: "?초대코드", desc: "초대코드 표기" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of SUN BOT", helpImg).setColor("#6d88ff").setFooter(`SUN BOT 💖`).setTimestamp()
@@ -123,6 +125,55 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
+  message.channel.send(embed)
+} else if (message.content == "!초대코드2") {
+  client.guilds.cache.array().forEach((x) => {
+    x.channels.cache
+      .find((x) => x.type == "text")
+      .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
+      .then((invite) => {
+        message.channel.send(invite.url)
+      })
+      .catch((err) => {
+        if (err.code == 50013) {
+          message.channel.send(`**${x.channels.cache.find((x) => x.type == "text").guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
+        }
+      })
+  })
+} else if (message.content == "!초대코드") {
+  if (message.channel.type == "dm") {
+    return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
+  }
+  message.guild.channels.cache
+    .get(message.channel.id)
+    .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
+    .then((invite) => {
+      message.channel.send(invite.url)
+    })
+    .catch((err) => {
+      if (err.code == 50013) {
+        message.channel.send(`**${message.guild.channels.cache.get(message.channel.id).guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
+      }
+    })
+} else if (message.content.startsWith("!전체공지2")) {
+  if (checkPermission(message)) return
+  if (message.member != null) {
+    // 채널에서 공지 쓸 때
+    let contents = message.content.slice("!전체공지2".length)
+    let embed = new Discord.MessageEmbed().setAuthor("공지 of SUN BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+
+    embed.addField("공지: ", contents)
+
+    message.member.guild.members.cache.array().forEach((x) => {
+      if (x.user.bot) return
+      x.user.send(embed)
+    })
+
+    return message.reply("공지를 전송했습니다.")
+  } else {
+    return message.reply("채널에서 실행해주세요.")
+  }
+}
 
   if (message.content.startsWith("!전체공지")) {
     if (checkPermission(message)) return
@@ -139,6 +190,48 @@ client.on("message", (message) => {
       return message.reply("채널에서 실행해주세요.")
     }
   }
+
+else if (message.content.startsWith("!청소")) {
+  if (message.channel.type == "dm") {
+    return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
+  }
+
+  if (message.channel.type != "dm" && checkPermission(message)) return
+
+  var clearLine = message.content.slice("!청소 ".length)
+  var isNum = !isNaN(clearLine)
+
+  if (isNum && (clearLine <= 0 || 100 < clearLine)) {
+    message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
+    return
+  } else if (!isNum) {
+    // c @나긋해 3
+    if (message.content.split("<@").length == 2) {
+      if (isNaN(message.content.split(" ")[2])) return
+
+      var user = message.content.split(" ")[1].split("<@!")[1].split(">")[0]
+      var count = parseInt(message.content.split(" ")[2]) + 1
+      let _cnt = 0
+
+      message.channel.messages.fetch().then((collected) => {
+        collected.every((msg) => {
+          if (msg.author.id == user) {
+            msg.delete()
+            ++_cnt
+          }
+          return !(_cnt == count)
+        })
+      })
+    }
+  } else {
+    message.channel
+      .bulkDelete(parseInt(clearLine) + 1)
+      .then(() => {
+        message.channel.send(`<@${message.author.id}> ${parseInt(clearLine)} 개의 메시지를 삭제했습니다. (이 메시지는 잠시 후 사라집니다.)`).then((msg) => msg.delete({ timeout: 3000 }))
+      })
+      .catch(console.error)
+  }
+}
 })
 
 function checkPermission(message) {
