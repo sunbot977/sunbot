@@ -159,7 +159,7 @@ client.on("message", (message) => {
   if (message.member != null) {
     // 채널에서 공지 쓸 때
     let contents = message.content.slice("!전체공지2".length)
-    let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#2d20ec").setFooter(`SUN BOT 🔮`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#4ee75d").setFooter(`SUN BOT 🌈`).setTimestamp()
 
     embed.addField("공지: ", contents)
 
@@ -179,13 +179,10 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!전체공지".length)
-      let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#4ee75d").setFooter('SUN BOT 🌈').setTimestamp()
-
-      embed.addField("공지: ",contents)
 
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
-        x.user.send(embed)
+        x.user.send(`<@${message.author.id}> ${contents}`)
       })
 
       return message.reply("공지를 전송했습니다.")
