@@ -24,7 +24,7 @@ const roleName = "손님" // 입장 시 지급 할 역할의 이름을 적어주
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "?명령어를 입력해보세요." }, status: "online" })
+  client.user.setPresence({ activity: { name: "?명령어를 입력해보세요." }, status: "Working"})
 })
 
 client.on("guildMemberAdd", (member) => {
