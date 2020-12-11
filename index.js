@@ -149,8 +149,8 @@ client.on("message", (message) => {
     .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
     .then((invite) => {
       message.channel.send(invite.url)
+    .setcolor("#ebe565")
     })
-    .setcolor("#e7d064")
     .catch((err) => {
       if (err.code == 50013) {
         message.channel.send(`**${message.guild.channels.cache.get(message.channel.id).guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
