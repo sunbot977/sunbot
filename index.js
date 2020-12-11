@@ -149,7 +149,6 @@ client.on("message", (message) => {
     .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
     .then((invite) => {
       message.channel.send(invite.url)
-    .setcolor("#ebe565")
     })
     .catch((err) => {
       if (err.code == 50013) {
@@ -161,7 +160,7 @@ client.on("message", (message) => {
   if (message.member != null) {
     // 채널에서 공지 쓸 때
     let contents = message.content.slice("!전체공지2".length)
-    let embed = new Discord.MessageEmbed().setAuthor("공지 of SUN BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#186de6").setFooter(`SUN BOT ❤️`).setTimestamp()
 
     embed.addField("공지: ", contents)
 
@@ -184,7 +183,6 @@ client.on("message", (message) => {
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
         x.user.send(`<@${message.author.id}> ${contents}`)
-        .setcolor("#3253e2")
       })
 
       return message.reply("공지를 전송했습니다.")
