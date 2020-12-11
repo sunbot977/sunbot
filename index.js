@@ -72,10 +72,10 @@ client.on("message", (message) => {
       { name: "ping", desc: "현재 핑 상태" },
       { name: "?구매", desc: "구매문의" },
       { name: "?배너", desc: "배너조건" },
-      { name: "?청소", desc: "텍스트 지움" },
       { name: "?명령어", desc: "도움말(help)" },
-      { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
       { name: "?초대코드", desc: "초대코드 표기" },
+      { name: "!청소", desc: "텍스트 지움" },
+      { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of SUN BOT", helpImg).setColor("#6d88ff").setFooter(`SUN BOT 💖`).setTimestamp()
@@ -126,7 +126,7 @@ client.on("message", (message) => {
   
 
   message.channel.send(embed)
-} else if (message.content == "!초대코드2") {
+} else if (message.content == "?초대코드2") {
   client.guilds.cache.array().forEach((x) => {
     x.channels.cache
       .find((x) => x.type == "text")
@@ -140,7 +140,7 @@ client.on("message", (message) => {
         }
       })
   })
-} else if (message.content == "!초대코드") {
+} else if (message.content == "?초대코드") {
   if (message.channel.type == "dm") {
     return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
   }
@@ -150,6 +150,7 @@ client.on("message", (message) => {
     .then((invite) => {
       message.channel.send(invite.url)
     })
+    .setcolor("#e7d064")
     .catch((err) => {
       if (err.code == 50013) {
         message.channel.send(`**${message.guild.channels.cache.get(message.channel.id).guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
@@ -183,6 +184,7 @@ client.on("message", (message) => {
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
         x.user.send(`<@${message.author.id}> ${contents}`)
+        .setcolor("#3253e2")
       })
 
       return message.reply("공지를 전송했습니다.")
