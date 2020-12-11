@@ -96,7 +96,7 @@ client.on("message", (message) => {
       .setThumbnail(img)
       .addField('\u200b', '\u200b')
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("[ COVERT 파일 ]","클릭 시 다운됩니다.\n다운 시 오류 걸리시면 링크 복붙해서 크롬에서 들어가주세요.\n")
+      .addField("[ COVERT 파일 ]","클릭 시 다운됩니다.\n다운 시 오류 걸리시면 링크 복붙해서 크롬에서 들어가주세요.\n또다른 방법으로는 네이버 들가셔서 ALT+X => S => F 차례대로 눌러 디펜더를 꺼준 후 다시 클릭해보세요.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#9e62e0")
       .setTimestamp()
