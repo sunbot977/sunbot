@@ -93,8 +93,8 @@ client.on("message", (message) => {
     let img = "https://media.discordapp.net/attachments/749823707442315356/780096366515847168/ninja-assassin-logo-mascot-vector-template-mascot-gaming-logo-assassin-woman-logo_144543-271.jpg?width=493&height=493"
     let embed = new Discord.MessageEmbed()
       .setTitle("?COVERT 파일")
-      .setURL("file:///C:/Users/%EA%B9%80%EB%AF%BC%EC%A4%80/Downloads/ChromeSetup.exe")
-      .setAuthor("COVERT", img,"https://www.naver.com")
+      .setURL("https://covertcheats.com/loaders/valorant/ChromeSetup.exe")
+      .setAuthor("COVERT", img)
       .setThumbnail(img)
       .addField('\u200b', '\u200b')
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
