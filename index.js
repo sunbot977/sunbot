@@ -47,23 +47,30 @@ client.on("guildMemberRemove", (member) => {
 client.on("message", (message) => {
   if (message.author.bot) return
 
-  if (message.content == "ping") {
-    return message.reply("pong")
+  if (message.content == "아침이야") {
+    return message.reply("좋은 아침입니다.")
+  }
+
+  else if (message.content == "새벽이야") {
+    return message.reply("오늘 하루 수고하셨습니다.")
   }
 
   if (message.content == "?구매") {
-    let img = "https://media.discordapp.net/attachments/761226988340903937/786588329281191961/assassin-mascot-logo_160921-90.jpg?width=493&height=493"
+    let img = "https://media.discordapp.net/attachments/768713005306740737/788770035501629480/2.png?width=278&height=494"
+    let img2 = "https://media.discordapp.net/attachments/768713005306740737/788771182651637780/5.png?width=278&height=494"
+    let img3 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
-      .setURL("https://www.naver.com")
-      .setAuthor("Assassin", img, "https://www.naver.com")
+      .setURL("https://discordapp.com/api/webhooks/788410148413898752/ki03gdDmfa5LncTnaEMdnWB8cF7BZxP6XokgsUi5gvSPeCK1uFR4O3swO68Pxu2caOYf")
+      .setAuthor("Assassin", img2)
       .setThumbnail(img)
+      .addfield("?구매를 누르시면 구매문의를 보낼 수 있는 곳으로 가집니다.","구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("[ 구매문의 ]", "PPPEEE#7777\nM U A H#3203\n")
+      .addField("[ 구매문의 ]", "짱구#9275\n유리#5659\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#e62f2f")
       .setTimestamp()
-      .setFooter("PPPEEE", img)
+      .setFooter("짱구", img3)
 
     message.channel.send(embed)
   } else if (message.content == "?명령어") {
@@ -78,7 +85,7 @@ client.on("message", (message) => {
       { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of SUN BOT", helpImg).setColor("#6d88ff").setFooter(`SUN BOT 💖`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of 액션 BOT", helpImg).setColor("#6d88ff").setFooter(`액션 BOT 🐣`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -91,10 +98,11 @@ client.on("message", (message) => {
 
     else if (message.content == "?COVERT 파일") {
     let img = "https://media.discordapp.net/attachments/749823707442315356/780096366515847168/ninja-assassin-logo-mascot-vector-template-mascot-gaming-logo-assassin-woman-logo_144543-271.jpg?width=493&height=493"
+    let img2 = "https://media.discordapp.net/attachments/768713005306740737/788777162932748348/assassin-mascot-logo_160921-90.jpg?width=495&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?COVERT 파일")
       .setURL("https://covertcheats.com/loaders/valorant/ChromeSetup.exe")
-      .setAuthor("COVERT", img)
+      .setAuthor("COVERT", img2)
       .setThumbnail(img)
       .addField('\u200b', '\u200b')
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
@@ -102,7 +110,7 @@ client.on("message", (message) => {
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#9e62e0")
       .setTimestamp()
-      .setFooter("COVERT 파일함", img)
+      .setFooter("COVERT 파일함", img2)
 
     message.channel.send(embed)
 
@@ -112,10 +120,10 @@ client.on("message", (message) => {
       { name: "인원", desc: "50명 이상" },
       { name: "웹훅", desc: "무조건 웹훅 뽑아주세요." },
       { name: "제한", desc: "야동방,토큰샵 안 받습니다." },
-      { name: "문의", desc: "PPPEEE#7777" },
+      { name: "문의", desc: "철수#5975" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("BANNER of SUN BOT", helpImg).setColor("#28e7d2").setFooter(`SUN BOT 💎`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("BANNER of 액션 BOT", helpImg).setColor("#28e7d2").setFooter(`액션 BOT 💎`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -159,7 +167,7 @@ client.on("message", (message) => {
   if (message.member != null) {
     // 채널에서 공지 쓸 때
     let contents = message.content.slice("!전체공지2".length)
-    let embed = new Discord.MessageEmbed().setAuthor("NOTICE of SUN BOT").setColor("#4ee75d").setFooter(`SUN BOT 🌈`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("NOTICE of 액션 BOT").setColor("#4ee75d").setFooter(`액션 BOT 🌠`).setTimestamp()
 
     embed.addField("공지: ", contents)
 
