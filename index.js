@@ -61,7 +61,7 @@ client.on("message", (message) => {
     let img3 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
-      .setURL("https://discordapp.com/api/webhooks/788410148413898752/ki03gdDmfa5LncTnaEMdnWB8cF7BZxP6XokgsUi5gvSPeCK1uFR4O3swO68Pxu2caOYf")
+      .setURL("https://www.naver.com")
       .setAuthor("Assassin", img2)
       .setThumbnail(img)
       .addfield("?구매를 누르시면 구매문의를 보낼 수 있는 곳으로 가집니다.","구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
