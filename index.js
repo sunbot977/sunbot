@@ -61,12 +61,10 @@ client.on("message", (message) => {
 
   if (message.content == "?구매") {
     let img = "https://media.discordapp.net/attachments/768713005306740737/788770035501629480/2.png?width=278&height=494"
-    let img2 = "https://media.discordapp.net/attachments/768713005306740737/788771182651637780/5.png?width=278&height=494"
-    let img3 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
       .setURL("https://www.naver.com")
-      .setAuthor("Assassin", img2)
+      .setAuthor("짱구샵", img)
       .setThumbnail(img)
       .addfield("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
@@ -74,7 +72,7 @@ client.on("message", (message) => {
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#e62f2f")
       .setTimestamp()
-      .setFooter("짱구", img3)
+      .setFooter("짱구", img)
 
     message.channel.send(embed)
   } else if (message.content == "?명령어") {
