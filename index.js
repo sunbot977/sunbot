@@ -64,7 +64,7 @@ client.on("message", (message) => {
       .setURL("https://www.naver.com")
       .setAuthor("Assassin", img2)
       .setThumbnail(img)
-      .addfield("?구매를 누르시면 구매문의를 보낼 수 있는 곳으로 가집니다.","구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
+      .addfield("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("[ 구매문의 ]", "짱구#9275\n유리#5659\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
