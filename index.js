@@ -59,7 +59,7 @@ client.on("message", (message) => {
     return message.reply("오늘 하루 수고하셨습니다☔")
   }
 
-  if (message.content == "?구매") {
+  else if (message.content == "?구매") {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
