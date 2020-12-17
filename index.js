@@ -217,7 +217,7 @@ else if (message.content == "?이벤트") {
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
   let embed = new Discord.MessageEmbed()
     .setTitle("COVERT 사용법")
-    .setURL("https://www.youtube.com")
+    .setURL("https://streamable.com/wyro9m")
     .setAuthor("짱구", img2)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
@@ -225,6 +225,22 @@ else if (message.content == "?이벤트") {
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setImage(img)
     .setColor("#0b0c0e")
+
+    message.channel.send(embed)
+}
+else if (message.content == "?구동영상") {
+  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
+  let embed = new Discord.MessageEmbed()
+    .setTitle("COVERT 구동영상")
+    .setURL("https://streamable.com/nm28j7")
+    .setAuthor("짱구", img2)
+    .setThumbnail(img)
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .addField("**`링크 누를 시 COVERT 구동영상이 나옵니다.`**","**__데스매치 빡고영상입니다.__**\n")
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setImage(img)
+    .setColor("#1976D2")
 
     message.channel.send(embed)
 }
