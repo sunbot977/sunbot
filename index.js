@@ -186,7 +186,7 @@ client.on("message", (message) => {
 } 
 else if (message.content == "?이벤트") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
-  let url = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495"
+  let img2 = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495"
   let embed = new Discord.MessageEmbed()
     .setTitle("[ 이벤트 ]")
     .setURL("https://www.naver.com")
@@ -199,7 +199,7 @@ else if (message.content == "?이벤트") {
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
     .setURL("https://www.naver.com")
-    .set_image(url)
+    .setImage(img2)
     .setColor("#e974db")
     .setTimestamp()
     .setFooter("COVERT 이벤트", img)
