@@ -85,6 +85,7 @@ client.on("message", (message) => {
       { name: "?명령어", desc: "도움말(help)" },
       { name: "?이벤트", desc: "현재 진행 중인 이벤트"},
       { name: "?사용법", desc: "COVERT 사용법" },
+      { name: "?구동영상", desc: "COVERT 구동영상" },
       { name: "?초대코드", desc: "초대코드 표기" },
       { name: "!청소", desc: "텍스트 지움" },
       { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
