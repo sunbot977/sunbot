@@ -193,12 +193,12 @@ else if (message.content == "?이벤트") {
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 이벤트 ]", "오픈 기념 COVERT 할인 들어갑니다.\n")
-    .addField("[ 💝COVERT 할인💝 ]", "오픈 기념 => 16,000 KRW\n")
+    .addField("[ 💝COVERT 할인💝 ]", "오픈 기념 => 1일권 : 16,000 KRW\n")
     .addField("[ 결제수단 ]","당분간 문상만 받겠습니다.\n티켓문의주세요\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
     .setURL("https://www.naver.com")
-    .set_Image(URL = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495")
+    .set_image( url = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495")
     .setColor("#e974db")
     .setTimestamp()
     .setFooter("COVERT 이벤트", img)
