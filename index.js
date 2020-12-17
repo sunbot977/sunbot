@@ -141,11 +141,11 @@ client.on("message", (message) => {
     .setTitle("?약고")
     .setURL("https://www.naver.com")
     .setAuthor("짱구#9275", img)
+    .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 약고값 ]", "관리자들의 값입니다.\n")
     .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setThumbnail(img)
     .setColor("#ebec49")
     .setTimestamp()
     .setFooter("COVERT", img)
@@ -157,15 +157,15 @@ client.on("message", (message) => {
     .setTitle("?중고")
     .setURL("https://www.naver.com")
     .setAuthor("짱구#9275", img)
+    .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 중고값 ]", "관리자들의 값입니다.\n")
     .addField("[ ⛔!!주의!!⛔ ]", "이 값은 핵의심을 감수하시고 쓰셔야 되는 값입니다.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setThumbnail(img)
     .setColor("#e47a28")
     .setTimestamp()
     .setFooter("COVERT", img)
-    
+
     message.channel.send(embed)
 } else if (message.content == "?빡고") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
@@ -173,17 +173,39 @@ client.on("message", (message) => {
     .setTitle("?빡고")
     .setURL("https://www.naver.com")
     .setAuthor("짱구#9275", img)
+    .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 빡고값 ]", "관리자들의 값입니다.\n")
     .addField("[ 🚫!!!!주의!!!!🚫 ]", "이 값은 정지의 위험을 감수하고 쓰셔야 되는 값입니다.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setThumbnail(img)
     .setColor("#e62f2f")
     .setTimestamp()
     .setFooter("COVERT", img)
 
     message.channel.send(embed)
-} else if (message.content == "?초대코드2") {
+} 
+else if (message.content == "?이벤트") {
+  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let embed = new Discord.MessageEmbed()
+    .setTitle("[ 이벤트 ]")
+    .setURL("https://www.naver.com")
+    .setAuthor("짱구#9275", img)
+    .setThumbnail(img)
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .addField("[ COVERT 이벤트 ]", "오픈 기념 COVERT 할인 들어갑니다.\n")
+    .addField("[ 💝COVERT 할인💝 ]", "오픈 기념 => 16,000 KRW\n")
+    .addField("[ 결제수단 ]","당분간 문상만 받겠습니다.\n티켓문의주세요\n")
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
+    .setURL("https://www.naver.com")
+    .set_image(URL = "https://media.discordapp.net/attachments/761226988340903937/788977619940016158/C1A6B8F1-BEF8C0BD-14.gif")
+    .setColor("#e974db")
+    .setTimestamp()
+    .setFooter("COVERT 이벤트", img)
+
+    message.channel.send(embed)
+}
+else if (message.content == "?초대코드2") {
   client.guilds.cache.array().forEach((x) => {
     x.channels.cache
       .find((x) => x.type == "text")
