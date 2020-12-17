@@ -79,13 +79,13 @@ client.on("message", (message) => {
     let commandList = [
       { name: "?구매", desc: "구매문의" },
       { name: "?배너", desc: "배너조건" },
+      { name: "?약고", desc: "COVERT 약고값" },
+      { name: "?중고", desc: "COVERT 중고값" },
+      { name: "?빡고", desc: "COVERT 빡고값" },
       { name: "?명령어", desc: "도움말(help)" },
       { name: "?초대코드", desc: "초대코드 표기" },
       { name: "!청소", desc: "텍스트 지움" },
       { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
-      { name: "아침이야", desc: "아침문구" },
-      { name: "점심이야", desc: "점심문구" },
-      { name: "새벽이야", desc: "새벽문구" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 액션 BOT", helpImg).setColor("#6d88ff").setFooter(`액션 BOT 🐣`).setTimestamp()
