@@ -135,6 +135,22 @@ client.on("message", (message) => {
 
     message.channel.send(embed)
   
+} else if (message.content == "?약고") {
+  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let embed = new Discord.MessageEmbed()
+    .setTitle("?약고")
+    .setURL("https://www.naver.com")
+    .setAuthor("짱구#9275", img)
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .addField("[ COVERT 약고값 ]", "관리자들의 값입니다.\n")
+    .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setThumbnail(img)
+    .setColor("#c076ce")
+    .setTimestamp()
+    .setFooter("COVERT", img)
+
+    message.channel.send(embed)
 } else if (message.content == "?초대코드2") {
   client.guilds.cache.array().forEach((x) => {
     x.channels.cache
