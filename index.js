@@ -60,15 +60,15 @@ client.on("message", (message) => {
   }
 
   if (message.content == "?구매") {
-    let img = "https://media.discordapp.net/attachments/768713005306740737/788770035501629480/2.png?width=278&height=494"
+    let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
       .setURL("https://www.naver.com")
       .setAuthor("짱구샵", img)
       .setThumbnail(img)
-      .addfield("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("[ 구매문의 ]", "짱구#9275\n유리#5659\n")
+      .addField("[ 구매문의 ]", "티켓을 열어주세요.\n")
+      .addfield("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#e62f2f")
       .setTimestamp()
@@ -100,11 +100,10 @@ client.on("message", (message) => {
 
     else if (message.content == "?COVERT 파일") {
     let img = "https://media.discordapp.net/attachments/749823707442315356/780096366515847168/ninja-assassin-logo-mascot-vector-template-mascot-gaming-logo-assassin-woman-logo_144543-271.jpg?width=493&height=493"
-    let img2 = "https://media.discordapp.net/attachments/768713005306740737/788777162932748348/assassin-mascot-logo_160921-90.jpg?width=495&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?COVERT 파일")
       .setURL("https://covertcheats.com/loaders/valorant/ChromeSetup.exe")
-      .setAuthor("COVERT", img2)
+      .setAuthor("COVERT", img)
       .setThumbnail(img)
       .addField('\u200b', '\u200b')
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
@@ -112,7 +111,7 @@ client.on("message", (message) => {
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#9e62e0")
       .setTimestamp()
-      .setFooter("COVERT 파일함", img2)
+      .setFooter("COVERT 파일함", img)
 
     message.channel.send(embed)
 
