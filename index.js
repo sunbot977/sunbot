@@ -198,7 +198,7 @@ else if (message.content == "?이벤트") {
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
     .setURL("https://www.naver.com")
-    .set_Image(URL = "https://media.discordapp.net/attachments/761226988340903937/788977619940016158/C1A6B8F1-BEF8C0BD-14.gif")
+    .set_Image(URL = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495")
     .setColor("#e974db")
     .setTimestamp()
     .setFooter("COVERT 이벤트", img)
