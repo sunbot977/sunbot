@@ -51,15 +51,7 @@ client.on("message", (message) => {
     return message.reply("좋은 아침입니다🌈")
   }
 
-  else if (message.content == "점심이야") {
-    return message.reply("맛점하세요😋")
-  }
-
-  else if (message.content == "새벽이야") {
-    return message.reply("오늘 하루 수고하셨습니다☔")
-  }
-
-   else if (message.content == "?구매") {
+   if (message.content == "?구매") {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let embed = new Discord.MessageEmbed()
       .setTitle("?구매")
@@ -68,7 +60,7 @@ client.on("message", (message) => {
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("[ 구매문의 ]", "티켓을 열어주세요.\n")
-      .addfield("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
+      .addField("구매문의를 디엠으로 보내시면 답장 안하겠습니다.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#e62f2f")
       .setTimestamp()
