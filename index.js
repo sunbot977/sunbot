@@ -140,6 +140,7 @@ client.on("message", (message) => {
   
 } else if (message.content == "?약고") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img2 = "https://media.discordapp.net/attachments/788788207432368159/789041148660154428/unknown.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?약고")
     .setURL("https://www.naver.com")
@@ -149,6 +150,7 @@ client.on("message", (message) => {
     .addField("[ COVERT 약고값 ]", "관리자들의 값입니다.\n")
     .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setImage(img2)
     .setColor("#ebec49")
     .setTimestamp()
     .setFooter("COVERT", img)
@@ -156,6 +158,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
 } else if (message.content == "?중고") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img2 = "https://media.discordapp.net/attachments/788788207432368159/789049796093542410/unknown.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?중고")
     .setURL("https://www.naver.com")
@@ -165,6 +168,7 @@ client.on("message", (message) => {
     .addField("[ COVERT 중고값 ]", "관리자들의 값입니다.\n")
     .addField("[ ⛔!!주의!!⛔ ]", "이 값은 핵의심을 감수하시고 쓰셔야 되는 값입니다.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setImage(img2)
     .setColor("#e47a28")
     .setTimestamp()
     .setFooter("COVERT", img)
@@ -172,6 +176,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
 } else if (message.content == "?빡고") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img2 = "https://media.discordapp.net/attachments/788788207432368159/789049518518960128/unknown.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?빡고")
     .setURL("https://www.naver.com")
@@ -181,6 +186,7 @@ client.on("message", (message) => {
     .addField("[ COVERT 빡고값 ]", "관리자들의 값입니다.\n")
     .addField("[ 🚫!!!!주의!!!!🚫 ]", "이 값은 정지의 위험을 감수하고 쓰셔야 되는 값입니다.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setImage(img2)
     .setColor("#e62f2f")
     .setTimestamp()
     .setFooter("COVERT", img)
