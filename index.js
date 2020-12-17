@@ -110,7 +110,7 @@ client.on("message", (message) => {
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("[ COVERT 파일 ]","클릭 시 다운됩니다.\n다운 시 오류 걸리시면 링크 복붙해서 크롬에서 들어가주세요.\n또다른 방법으로는 네이버 들가셔서 ALT+X => S => F 차례대로 눌러 디펜더를 꺼준 후 다시 클릭해보세요.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .setColor("#9e62e0")
+      .setColor("#9b24c9")
       .setTimestamp()
       .setFooter("COVERT 파일함", img)
 
@@ -146,10 +146,26 @@ client.on("message", (message) => {
     .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setThumbnail(img)
-    .setColor("#c076ce")
+    .setColor("#ebec49")
     .setTimestamp()
     .setFooter("COVERT", img)
 
+    message.channel.send(embed)
+} else if (message.content == "?중고") {
+  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let embed = new Discord.MessageEmbed()
+    .setTitle("?중고")
+    .setURL("https://www.naver.com")
+    .setAuthor("짱구#9275", img)
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .addField("[ COVERT 중고값 ]", "관리자들의 값입니다.\n")
+    .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setThumb(img)
+    .setColor("#e47a28")
+    .setTimestamp()
+    .setFooter("COVERT", img)
+    
     message.channel.send(embed)
 } else if (message.content == "?초대코드2") {
   client.guilds.cache.array().forEach((x) => {
