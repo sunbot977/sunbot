@@ -77,13 +77,15 @@ client.on("message", (message) => {
   } else if (message.content == "?명령어") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
-      { name: "ping", desc: "현재 핑 상태" },
       { name: "?구매", desc: "구매문의" },
       { name: "?배너", desc: "배너조건" },
       { name: "?명령어", desc: "도움말(help)" },
       { name: "?초대코드", desc: "초대코드 표기" },
       { name: "!청소", desc: "텍스트 지움" },
       { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
+      { name: "아침이야", desc: "아침문구" },
+      { name: "점심이야", desc: "점심문구" },
+      { name: "새벽이야", desc: "새벽문구" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 액션 BOT", helpImg).setColor("#6d88ff").setFooter(`액션 BOT 🐣`).setTimestamp()
