@@ -161,7 +161,7 @@ client.on("message", (message) => {
     .addField("[ COVERT 중고값 ]", "관리자들의 값입니다.\n")
     .addField("[ 무작정 안 좋다고 하지마세요. ]", "이 값으로 조절하면서 자신의 값을 찾으세요.\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setThumb(img)
+    .setnail(img)
     .setColor("#e47a28")
     .setTimestamp()
     .setFooter("COVERT", img)
