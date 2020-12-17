@@ -48,7 +48,13 @@ client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "아침이야") {
-    return message.reply("좋은 아침입니다🌈")
+    return message.reply("좋은 아침입니다 🌈")
+  }
+  else if (message.content == "점심이야") {
+    return message.reply("맛점하세요 😋")
+  }
+  else if (message.content == "새벽이야") {
+    return message.reply("오늘 하루도 수고하셨습니다 ☔")
   }
 
    if (message.content == "?구매") {
