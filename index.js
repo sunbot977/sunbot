@@ -67,7 +67,7 @@ client.on("message", (message) => {
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("[ 구매문의 ]", "티켓을 열어주세요.\n")
-      .addField("구매문의를 디엠으로 보내시면 답장 안하겠습니다","모든 문의 티켓으로 해주세요.\n")
+      .addField("[ 디엠으로 보내시면 답장 안합니다 ]", "모든 문의 티켓으로 해주세요.\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#e62f2f")
       .setTimestamp()
