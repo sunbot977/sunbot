@@ -50,14 +50,7 @@ client.on("message", (message) => {
   if (message.content == "아침이야") {
     return message.reply("좋은 아침입니다🌈")
   }
-  else if (message.content == "점심이야") {
-    return message.reply("맛점하세요 😋")
-  }
-  else if (message.content == "새벽이야") {
-    return message.reply("오늘 하루도 수고하셨습니다 ☔")
-  }
-
-
+  
    if (message.content == "?구매") {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let img = "https://media.discordapp.net/attachments/788744790291644426/788931174923632660/FB_IMG_1608116371928.jpg"
