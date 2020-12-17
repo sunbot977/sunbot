@@ -188,7 +188,7 @@ else if (message.content == "?이벤트") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495"
   let embed = new Discord.MessageEmbed()
-    .setTitle("[ 이벤트 ]")
+    .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
     .setURL("https://www.naver.com")
     .setAuthor("짱구#9275", img)
     .setThumbnail(img)
@@ -197,8 +197,6 @@ else if (message.content == "?이벤트") {
     .addField("[ 💝COVERT 할인💝 ]", "오픈 기념 => 1일권 : 16,000 KRW\n")
     .addField("[ 결제수단 ]","당분간 문상만 받겠습니다.\n티켓문의주세요\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
-    .setURL("https://www.naver.com")
     .setImage(img2)
     .setColor("#e974db")
     .setTimestamp()
