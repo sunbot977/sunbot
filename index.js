@@ -140,12 +140,13 @@ client.on("message", (message) => {
     message.channel.send(embed)
   
 } else if (message.content == "?약고") {
-  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let img2 = "https://media.discordapp.net/attachments/788788207432368159/789041148660154428/unknown.png"
+  let img3 = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?약고")
     .setURL("https://www.naver.com")
-    .setAuthor("짱구#9275", img)
+    .setAuthor("짱구#9275", img3)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 약고값 ]", "관리자들의 값입니다.\n")
@@ -154,16 +155,17 @@ client.on("message", (message) => {
     .setImage(img2)
     .setColor("#ebec49")
     .setTimestamp()
-    .setFooter("COVERT", img)
+    .setFooter("COVERT", img3)
 
     message.channel.send(embed)
 } else if (message.content == "?중고") {
-  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let img2 = "https://media.discordapp.net/attachments/788788207432368159/789049796093542410/unknown.png"
+  let img3 = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?중고")
     .setURL("https://www.naver.com")
-    .setAuthor("짱구#9275", img)
+    .setAuthor("짱구#9275", img3)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 중고값 ]", "관리자들의 값입니다.\n")
@@ -172,16 +174,17 @@ client.on("message", (message) => {
     .setImage(img2)
     .setColor("#e47a28")
     .setTimestamp()
-    .setFooter("COVERT", img)
+    .setFooter("COVERT", img3)
 
     message.channel.send(embed)
 } else if (message.content == "?빡고") {
-  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
+  let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let img2 = "https://media.discordapp.net/attachments/788788207432368159/789049518518960128/unknown.png"
+  let img3 = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
     .setTitle("?빡고")
     .setURL("https://www.naver.com")
-    .setAuthor("짱구#9275", img)
+    .setAuthor("짱구#9275", img3)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("[ COVERT 빡고값 ]", "관리자들의 값입니다.\n")
@@ -190,7 +193,7 @@ client.on("message", (message) => {
     .setImage(img2)
     .setColor("#e62f2f")
     .setTimestamp()
-    .setFooter("COVERT", img)
+    .setFooter("COVERT", img3)
 
     message.channel.send(embed)
 } 
@@ -216,6 +219,7 @@ else if (message.content == "?이벤트") {
 } else if (message.content == "?사용법") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
+  let img3 = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let embed = new Discord.MessageEmbed()
     .setTitle("COVERT 사용법")
     .setURL("https://streamable.com/wyro9m")
@@ -224,7 +228,7 @@ else if (message.content == "?이벤트") {
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("**`링크 누를 시 COVERT 사용법 영상이 나옵니다.`**","**__영상 참고해주세요__**\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setImage(img)
+    .setImage(img3)
     .setColor("#0b0c0e")
 
     message.channel.send(embed)
@@ -232,6 +236,7 @@ else if (message.content == "?이벤트") {
 else if (message.content == "?구동영상") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
+  let img3 = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let embed = new Discord.MessageEmbed()
     .setTitle("COVERT 구동영상")
     .setURL("https://streamable.com/nm28j7")
@@ -240,7 +245,7 @@ else if (message.content == "?구동영상") {
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("**`링크 누를 시 COVERT 구동영상이 나옵니다.`**","**__데스매치 빡고영상입니다.__**\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setImage(img)
+    .setImage(img3)
     .setColor("#1976D2")
 
     message.channel.send(embed)
