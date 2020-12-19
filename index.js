@@ -61,13 +61,13 @@ client.on("message", (message) => {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let img2 = "https://media.discordapp.net/attachments/788744790291644426/788931174923632660/FB_IMG_1608116371928.jpg"
     let embed = new Discord.MessageEmbed()
-      .setTitle("?구매")
+      .setTitle("[ 구매문의 ]")
       .setURL("https://www.naver.com")
       .setAuthor("짱구샵", img2)
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("[ 구매문의 ]", "티켓을 열어주세요.\n")
-      .addField("[ 디엠으로 보내시면 답장 안합니다 ]", "모든 문의 티켓으로 해주세요.\n")
+      .addField("**`[ 구매문의 ]`**", "@ADMIN or #티켓\n")
+      .addField("**`[ 디엠으로 보내시면 답장이 느릴 수도 있습니다. ]`**", "**왠만하면 티켓으로 해주세요** 🎫\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#89ff93")
       .setTimestamp()
@@ -79,14 +79,8 @@ client.on("message", (message) => {
     let commandList = [
       { name: "?구매", desc: "구매문의" },
       { name: "?배너", desc: "배너조건" },
-      { name: "?약고", desc: "COVERT 약고값" },
-      { name: "?중고", desc: "COVERT 중고값" },
-      { name: "?빡고", desc: "COVERT 빡고값" },
       { name: "?명령어", desc: "도움말(help)" },
       { name: "?이벤트", desc: "현재 진행 중인 이벤트"},
-      { name: "?사용법", desc: "COVERT 사용법" },
-      { name: "?구동영상", desc: "COVERT 구동영상" },
-      { name: "?초대코드", desc: "초대코드 표기" },
       { name: "!청소", desc: "텍스트 지움" },
       { name: "!전체공지", desc: "DM으로 전체 공지 보내기" },
     ]
@@ -102,7 +96,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-    else if (message.content == "?COVERT 파일") {
+    else if (message.content == "*COVERT 파일") {
     let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
     let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
     let embed = new Discord.MessageEmbed()
@@ -213,7 +207,7 @@ else if (message.content == "?이벤트") {
     .setFooter("COVERT 이벤트", img)
 
     message.channel.send(embed)
-} else if (message.content == "?사용법") {
+} else if (message.content == "*사용법") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
   let img3 = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
@@ -229,7 +223,7 @@ else if (message.content == "?이벤트") {
     .setColor("#0b0c0e")
 
     message.channel.send(embed)
-} else if (message.content == "?구동영상") {
+} else if (message.content == "*구동영상") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788770078522867742/FB_IMG_1608116357341.jpg?width=396&height=495"
   let img3 = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
@@ -277,15 +271,27 @@ else if (message.content == "?이벤트") {
     .setColor("#a0ceff")
 
     message.channel.send(embed)
-} else if (message.content == "?COVERT 기능") {
+} else if (message.content == "*COVERT 기능") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
+  .setTitle("[ COVERT ]")
+  .setURL("https://www.naver.com")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("**`에임봇`**","**트리거**\n**반동제어**\n**범위 표시 ON/OFF**\n**스무스 조절**\n**범위 조절**\n**거리 조절**\n**샷 딜레이 조절**\n**에임 부위 선택**\n**에임 키 선택**\n**스냅라인 조준**\n**트랩와이어 조준**\n**스파이캠 조준**\n**붐봇 조준**\n**포탑 조준**\n**드론 조준**\n")
     .addField("**`ESP`**","**스켈레톤 ESP**\n**박스 ESP**\n**체력바 표시**\n**챔피언 이름 표시**\n**적까지의 거리 표시**\n**플레이어 닉네임 표시**\n**무기 표시**\n**적까지 선으로 표시**\n**스냅라인 표시**\n**트랩와이어 표시**\n**스파이캠 표시**\n**붐봇 표시**\n**포탑 표시**\n**드론 표시**\n**스파이크 표시**\n")
     .addField("**`MISC`**","**HWID 스푸퍼**\n**셋팅 저장/불러오기/공유**\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setThumbnail(img)
+    .setColor("#0b0c0e")
+
+    message.channel.send(embed)
+} else if (message.content == "*COVERT 구매문의") {
+  let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
+  let embed = new Discord.MessageEmbed()
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .addField("@ADMIN or #티켓").addField("**`가격`**","#『🔮』ㅣ이벤트\n").addField("**`구동영상`**","#『💎』ㅣ구동영상\nhttps://streamable.com/nm28j7\n")
+    //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setImage(img)
     .setColor("#0b0c0e")
 
     message.channel.send(embed)
