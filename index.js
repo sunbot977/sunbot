@@ -285,7 +285,7 @@ else if (message.content == "?이벤트") {
     .addField("**`ESP`**","**스켈레톤 ESP**\n**박스 ESP**\n**체력바 표시**\n**챔피언 이름 표시**\n**적까지의 거리 표시**\n**플레이어 닉네임 표시**\n**무기 표시**\n**적까지 선으로 표시**\n**스냅라인 표시**\n**트랩와이어 표시**\n**스파이캠 표시**\n**붐봇 표시**\n**포탑 표시**\n**드론 표시**\n**스파이크 표시**\n")
     .addField("**`MISC`**","**HWID 스푸퍼**\n**셋팅 저장/불러오기/공유**\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .setImage(img)
+    .setThumbnail(img)
     .setColor("#0b0c0e")
 
     message.channel.send(embed)
