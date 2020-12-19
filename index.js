@@ -66,8 +66,8 @@ client.on("message", (message) => {
       .setAuthor("짱구샵", img2)
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("**`[ 구매문의 ]`**", "@ADMIN or #티켓\n")
-      .addField("**`[ 디엠으로 보내시면 답장이 느릴 수도 있습니다. ]`**", "**왠만하면 티켓으로 해주세요** 🎫\n")
+      .addField("**`[ 구매문의 ]`**", "ADMIN or 티켓\n")
+      .addField("**`[ 디엠으로 보내시면 답장이 느릴 수도 있습니다. ]`**", "**되도록 티켓으로 해주세요** 🎫\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#89ff93")
       .setTimestamp()
@@ -289,7 +289,9 @@ else if (message.content == "?이벤트") {
   let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
   let embed = new Discord.MessageEmbed()
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .addField("@ADMIN or #티켓").addField("**`가격`**","#『🔮』ㅣ이벤트\n").addField("**`구동영상`**","#『💎』ㅣ구동영상\nhttps://streamable.com/nm28j7\n")
+    .addField("**`구매문의`**","**__ADMIN or 티켓__**")
+    .addField("**`가격`**","**__이벤트 가격 : 1일 16,000 KRW__**\n")
+    .addField("**`구동영상`**","**__데스매치 빡고영상__**\nhttps://streamable.com/nm28j7\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setImage(img)
     .setColor("#0b0c0e")
