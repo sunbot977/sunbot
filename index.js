@@ -278,7 +278,7 @@ else if (message.content == "?이벤트") {
 
     message.channel.send(embed)
 } else if (message.content == "?COVERT 기능") {
-  let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
+  let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("**`에임봇`**","**트리거**\n**반동제어**\n**범위 표시 ON/OFF**\n**스무스 조절**\n**범위 조절**\n**거리 조절**\n**샷 딜레이 조절**\n**에임 부위 선택**\n**에임 키 선택**\n**스냅라인 조준**\n**트랩와이어 조준**\n**스파이캠 조준**\n**붐봇 조준**\n**포탑 조준**\n**드론 조준**\n")
