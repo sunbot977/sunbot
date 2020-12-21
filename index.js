@@ -217,7 +217,7 @@ else if (message.content == "?이벤트") {
     .setAuthor("짱구", img2)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .addField("**`링크 누를 시 COVERT 사용법 영상이 나옵니다.`**","**__영상 참고해주세요__**\n")
+    .addField("**`링크 누를 시 COVERT 사용법 영상이 나옵니다.`**","**__영상 참고해주세요__**\nhttps://streamable.com/wyro9m\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setImage(img3)
     .setColor("#6bb6ff")
@@ -233,7 +233,7 @@ else if (message.content == "?이벤트") {
     .setAuthor("짱구", img2)
     .setThumbnail(img)
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-    .addField("**`링크 누를 시 COVERT 구동영상이 나옵니다.`**","**__데스매치 빡고영상입니다.__**\n")
+    .addField("**`링크 누를 시 COVERT 구동영상이 나옵니다.`**","**__데스매치 빡고영상입니다.__**\nhttps://streamable.com/nm28j7\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setImage(img3)
     .setColor("#1976D2")
