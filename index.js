@@ -66,14 +66,15 @@ client.on("message", (message) => {
       .setAuthor("짱구샵", img2)
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("**`[ 구매문의 ]`**", "**ADMIN or 티켓**\n")
-      .addField("**`[ 디엠으로 보내시면 답장이 느릴 수도 있습니다. ]`**", "**되도록 티켓으로 해주세요** 🎫\n")
+      .addField("**`[ 짱구샵 ]`**", "**ADMIN or 티켓**\n")
+      .addField("**`[디엠으로 보내시면 답장이 느릴 수도 있습니다.]`**", "**되도록 티켓으로 해주세요** 🎫\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#89ff93")
       .setTimestamp()
       .setFooter("짱구", img2)
 
     message.channel.send(embed)
+    await message.delete()
   } else if (message.content == "?명령어") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
@@ -120,7 +121,7 @@ client.on("message", (message) => {
       { name: "인원", desc: "50명 이상" },
       { name: "웹훅", desc: "무조건 웹훅 뽑아주세요." },
       { name: "제한", desc: "야동방,토큰샵 안 받습니다." },
-      { name: "문의", desc: "철수#5975" },
+      { name: "문의", desc: "짱구#9275" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("BANNER of 액션 BOT", helpImg).setColor("#28e7d2").setFooter(`액션 BOT 💎`).setTimestamp()
@@ -192,7 +193,7 @@ else if (message.content == "?이벤트") {
   let img = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let img2 = "https://media.discordapp.net/attachments/788744790291644426/788985817309118484/FB_IMG_1608116400231.jpg?width=516&height=495"
   let embed = new Discord.MessageEmbed()
-    .setTitle("[ 기간 : 12/17 ~ 자리잡을때까지 ]")
+    .setTitle("[ 기간 : 12/21 ~ 자리잡을때까지 ]")
     .setURL("https://www.naver.com")
     .setAuthor("짱구#9275", img)
     .setThumbnail(img)
@@ -287,12 +288,14 @@ else if (message.content == "?이벤트") {
     message.channel.send(embed)
 } else if (message.content == "*COVERT 구매문의") {
   let img = "https://media.discordapp.net/attachments/761226988340903937/789485074739232818/GIF_.gif"
+  let img2 = "https://images-ext-2.discordapp.net/external/3IYkyAF-0_UQ-oq8Em0B-BHtUjw_IDbjvSYoA1QYw0o/https/covertcheats.com/forums/images/logo.png"
   let embed = new Discord.MessageEmbed()
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .addField("**`구매문의`**","**__ADMIN or 티켓__**")
     .addField("**`가격`**","**__이벤트 가격 : 1일 16,000 KRW__**\n")
     .addField("**`구동영상`**","**__데스매치 빡고영상__**\nhttps://streamable.com/nm28j7\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
+    .setThumbnail(img2)
     .setImage(img)
     .setColor("#0b0c0e")
 
