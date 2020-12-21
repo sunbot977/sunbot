@@ -61,12 +61,12 @@ client.on("message", (message) => {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
     let img2 = "https://media.discordapp.net/attachments/788744790291644426/788931174923632660/FB_IMG_1608116371928.jpg"
     let embed = new Discord.MessageEmbed()
-      .setTitle("[ 구매문의 ]")
+      .setTitle("[ 짱구샵 ]")
       .setURL("https://www.naver.com")
-      .setAuthor("짱구샵", img2)
+      .setAuthor("짱구", img2)
       .setThumbnail(img)
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("**`[ 짱구샵 ]`**", "**ADMIN or 티켓**\n")
+      .addField("**`[ 구매문의 ]`**", "**ADMIN or 티켓**\n")
       .addField("**`[디엠으로 보내시면 답장이 느릴 수도 있습니다.]`**", "**되도록 티켓으로 해주세요** 🎫\n")
       //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setColor("#89ff93")
@@ -220,7 +220,7 @@ else if (message.content == "?이벤트") {
     .addField("**`링크 누를 시 COVERT 사용법 영상이 나옵니다.`**","**__영상 참고해주세요__**\n")
     //.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
     .setImage(img3)
-    .setColor("#0b0c0e")
+    .setColor("#6bb6ff")
 
     message.channel.send(embed)
 } else if (message.content == "*구동영상") {
