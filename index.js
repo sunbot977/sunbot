@@ -74,7 +74,7 @@ client.on("message", (message) => {
       .setFooter("짱구", img2)
 
     message.channel.send(embed)
-    await message.delete()
+    await message.delete(content)
   } else if (message.content == "?명령어") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
