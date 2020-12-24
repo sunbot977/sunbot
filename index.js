@@ -131,6 +131,9 @@ client.on("message", (message) => {
   else if (message.content == "새벽이야") {
     return message.reply("오늘 하루도 수고하셨습니다 ☔")
   }
+  else if (message.content == "저녘이야") {
+    return message.reply("오늘의 저녘 메뉴추천 : 치킨 / 피자 / 떡볶이 / 갈비탕 / 삼겹살 / 김치찌개 / 미역국 📋")
+  }
 
    if (message.content == "?구매") {
     let img = "https://media.discordapp.net/attachments/788788207432368159/788799992936005692/nwdn_file_temp_1608134854101.jpg?width=430&height=495"
