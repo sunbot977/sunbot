@@ -24,7 +24,7 @@ const roleName = "게스트" // 입장 시 지급 할 역할의 이름을 적어
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "?명령어를 입력해보세요." }, status: "online"})
+  client.user.setActivity('TWITCH 방송 중', { type: 'STREAMING', url: 'https://www.twitch.tv/bks04192'});
 })
 
 client.on("guildMemberAdd", (member) => {
