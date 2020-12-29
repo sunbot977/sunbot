@@ -24,7 +24,7 @@ const roleName = "게스트" // 입장 시 지급 할 역할의 이름을 적어
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setActivity('YOUTUBE', { type: 'YOUTUBE', url: 'https://www.youtube.com/watch?v=CgliQTKyEF4'});
+  client.user.setActivity('TWITCH', { type: 'STREAMING', url: 'https://www.twitch.tv/bks04192'});
 })
 
 client.on("guildMemberAdd", (member) => {
